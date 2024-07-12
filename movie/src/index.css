@@ -92,3 +92,30 @@
 .sponsor-container li {
   list-style: none;
 }
+
+/* Card style */
+.card-container{
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.card-wrapper{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  width: 25%;
+  padding: 15px;
+}
+
+.card-wrapper > p{
+  padding: 5px 0;
+}
+.card-wrapper img {
+  margin: 10px 0;
+}
+.card-wrapper img:hover{
+  scale: 1.05;
+  cursor: pointer;
+
+}
