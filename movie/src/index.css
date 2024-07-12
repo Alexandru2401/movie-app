@@ -96,16 +96,19 @@
 /* Card style */
 .card-container{
   display: flex;
-  align-items: start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  width: 25%;
 }
 
 .card-wrapper{
   display: flex;
   align-items: start;
   flex-direction: column;
-  width: 25%;
   padding: 15px;
+}
+
+.card-container button {
+  margin: 0 10px ;
 }
 
 .card-wrapper > p{
@@ -114,8 +117,9 @@
 .card-wrapper img {
   margin: 10px 0;
 }
-.card-wrapper img:hover{
-  scale: 1.05;
-  cursor: pointer;
 
+.layout-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
