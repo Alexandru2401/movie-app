@@ -123,3 +123,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.car{
+  width: 100%;
+}
