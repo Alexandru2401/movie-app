@@ -20,10 +20,10 @@ export default function Card(props) {
         <img src={image} alt={title} />
       </div>
 
-      <p>Rating: {rating}</p>
-      <p>Description: {description}</p>
-      <p>Series rank: {rank}</p>
-      <p>Year: {year}</p>
+      <p>{rating}</p>
+      <p>{description}</p>
+      <p>{rank}</p>
+      <p>{year}</p>
     </div>
   );
 }

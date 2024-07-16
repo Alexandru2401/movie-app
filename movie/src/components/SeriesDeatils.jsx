@@ -11,6 +11,7 @@ export default function SeriesDetails() {
   }
 
   return (
+    <div style={{backgroundImage:`url(${foundSeries.big_image})`}}>
     <Card
       title={foundSeries.title}
       description={foundSeries.description}
@@ -19,5 +20,6 @@ export default function SeriesDetails() {
       rank={foundSeries.rank}
       year={foundSeries.year}
     />
+    </div>
   );
 }

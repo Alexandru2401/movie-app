@@ -11,6 +11,7 @@ export default function MovieDetails() {
   }
 
   return (
+    <div style={{backgroundImage:`url(${foundMovie.big_image})`}}>
     <Card
     title = {foundMovie.title}
     description = {foundMovie.description}
@@ -19,5 +20,6 @@ export default function MovieDetails() {
     rank={foundMovie.rank}
     year={foundMovie.year}
     />
+    </div>
   );
 }
