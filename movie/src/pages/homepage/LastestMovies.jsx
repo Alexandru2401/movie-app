@@ -9,7 +9,7 @@ export default function LatestMovies() {
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3,
+        items: 2,
       },
       tablet: {
         breakpoint: { max: 1024, min: 464 },
@@ -21,7 +21,7 @@ export default function LatestMovies() {
       },
     };
   return (
-    <div style={{display:"flex"}}>
+    <div className="carousel-container">
     <h2>Latest movies</h2>
     <Carousel
         className="car"
@@ -31,12 +31,13 @@ export default function LatestMovies() {
         responsive={responsive}
         ssr={true}
         infinite={true}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={2500}
         keyBoardControl={true}
         customTransition="all 1s ease-in-out"
         transitionDuration={1000}
         autoPlay={false}
         itemClass="carousel-item"
+        centerMode={true}
       >
       {latestMovies.map((movie) => (
         <Card

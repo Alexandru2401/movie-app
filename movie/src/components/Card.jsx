@@ -14,7 +14,7 @@ export default function Card(props) {
   } = props;
   return (
     <div key={id} className="card-wrapper">
-      <h1 className="card-title">{title}</h1>
+      <h2 className="card-title">{title}</h2>
 
       <div className="image-container">
         <img src={image} alt={title} />

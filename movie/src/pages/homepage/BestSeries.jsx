@@ -76,7 +76,7 @@ export default function CarouselPage() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 2,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -88,7 +88,7 @@ export default function CarouselPage() {
     },
   };
   return (
-    <div style={{ display: "flex" }}>
+    <div className="carousel-container">
       <h2>Best series</h2>
 
       <Carousel
@@ -99,12 +99,13 @@ export default function CarouselPage() {
         responsive={responsive}
         ssr={true}
         infinite={true}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={2500}
         keyBoardControl={true}
         customTransition="all 1s ease-in-out"
         transitionDuration={1000}
         autoPlay={false}
         itemClass="carousel-item"
+        centerMode={true}
       >
         {topSeries.map((series) => (
           <Card

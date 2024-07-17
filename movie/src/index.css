@@ -124,6 +124,20 @@
   flex-wrap: wrap;
 }
 
+/* carousel style */
 .car{
-  width: 100%;
+  width: 80%;
+}
+
+.carousel-item{
+  margin: 15px;
+}
+
+.carousel-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: red;
 }
