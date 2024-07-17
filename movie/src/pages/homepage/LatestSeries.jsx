@@ -47,7 +47,9 @@ export default function LatestSeries() {
           />
         ))}
       </Carousel>
-      <Link to="/series">Go to series</Link>
+      <Link to="/series">
+        <button className="btn">Go to series</button>
+      </Link>
     </div>
   );
 }

@@ -17,8 +17,7 @@ export default function Series() {
     year,
   } = seriesType;
   return (
-    <div className="layout-container">
-     
+    <div>
       <input
         type="search"
         id="search-series"
@@ -27,25 +26,26 @@ export default function Series() {
           setQuery(e.target.value.toLowerCase());
         }}
       />
-    
-      {series
-        .filter((series) => series.title.toLowerCase().includes(query))
-        .map((series) => (
-          <div key={series.id} className="card-container">
-            <Card
-              id={series.id}
-              title={series.title}
-              description={series.description}
-              rating={series.rating}
-              image={series.image}
-              rank={series.rank}
-              year={series.year}
-            />
-            <Link to={`/SeriesDetails/${series.id}`}>
-              <button>See more</button>
-            </Link>
-          </div>
-        ))}
+      <div className="layout-container">
+        {series
+          .filter((series) => series.title.toLowerCase().includes(query))
+          .map((series) => (
+            <div key={series.id} className="card-container">
+              <Card
+                id={series.id}
+                title={series.title}
+                description={series.description}
+                rating={series.rating}
+                image={series.image}
+                rank={series.rank}
+                year={series.year}
+              />
+              <Link to={`/SeriesDetails/${series.id}`}>
+                <button className="btn">See more</button>
+              </Link>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }

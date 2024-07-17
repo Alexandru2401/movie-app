@@ -17,7 +17,7 @@ export default function Movies() {
     year,
   } = moviesType;
   return (
-    <div className="layout-container">
+    <div>
       <input
         type="search"
         id="search-movie"
@@ -26,24 +26,26 @@ export default function Movies() {
           setQuery(e.target.value.toLowerCase());
         }}
       />
-      {movies
-        .filter((movie) => movie.title.toLowerCase().includes(query))
-        .map((movie) => (
-          <div key={movie.id} className="card-container">
-            <Card
-              id={movie.id}
-              title={movie.title}
-              description={movie.description}
-              rating={movie.rating}
-              image={movie.image}
-              rank={movie.rank}
-              year={movie.year}
-            />
-            <Link to={`/MoviesDetails/${movie.id}`}>
-              <button>See more</button>
-            </Link>
-          </div>
-        ))}
+      <div className="layout-container">
+        {movies
+          .filter((movie) => movie.title.toLowerCase().includes(query))
+          .map((movie) => (
+            <div key={movie.id} className="card-container">
+              <Card
+                id={movie.id}
+                title={movie.title}
+                description={movie.description}
+                rating={movie.rating}
+                image={movie.image}
+                rank={movie.rank}
+                year={movie.year}
+              />
+              <Link to={`/MoviesDetails/${movie.id}`}>
+                <button className="btn">See more</button>
+              </Link>
+            </div>
+          ))}
+      </div>
     </div>
   );
 }

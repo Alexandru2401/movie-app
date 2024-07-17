@@ -48,7 +48,7 @@ export default function LatestMovies() {
         />
       ))}
       </Carousel>
-      <Link to="/movies">Go to movies</Link>
+      <Link to="/movies"><button className="btn">Go to movies</button></Link>
     </div>
   );
 }

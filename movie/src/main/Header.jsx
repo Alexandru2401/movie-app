@@ -1,7 +1,7 @@
 import movieImg from "../assests/movieImg.png";
 import bgImg from "../assests/bgImg.png";
 import { Link } from "react-router-dom";
-
+import { Link as ScrollLink, Element } from "react-scroll";
 export default function Header() {
   return (
     <header
@@ -10,19 +10,25 @@ export default function Header() {
     >
       <nav className="navbar">
         <ul>
-        <Link to="/">Home</Link>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <li>
+            <ScrollLink to="about" smooth={true} duration={500}>
+              About
+            </ScrollLink>
+          </li>
           <Link to="/movies">
             <li>Movies</li>
           </Link>
           <Link to="/series">
             <li>Series</li>
           </Link>
-          <Link>
-            <li>Contact</li>
-          </Link>
-          <Link>
-            <li>About</li>
-          </Link>
+          <li>
+            <ScrollLink to="contact" smooth={true} duration={500}>
+              Contact
+            </ScrollLink>
+          </li>
         </ul>
       </nav>
       <div className="content-container">

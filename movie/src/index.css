@@ -44,6 +44,13 @@
   border: none;
 }
 
+.btn:hover{
+  cursor: pointer;
+  background-color: #0F3460 ;
+  color: #FFF7FC;
+  transition: all .5s ease;
+}
+
 .navbar {
   color: #FFF7FC;
   position: absolute;
@@ -70,6 +77,16 @@
   font-size: 20px;
 }
 
+.navbar ul a {
+  text-decoration: none;
+}
+.navbar li:hover{
+  cursor: pointer;
+}
+
+.navbar ul a:hover {
+  border-bottom: 1px solid red;
+}
 
 /* Footer */
 .footer {
@@ -118,6 +135,7 @@
   margin: 10px 0;
 }
 
+/* movies/series pages style */
 .layout-container {
   display: flex;
   align-items: center;
@@ -139,5 +157,5 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px 0;
-  background-color: red;
+  background-color: rgb(230, 223, 223);
 }
